@@ -30,7 +30,7 @@ from . import __
 # --- END: Injected by Copier ---
 
 
-__version__ = '1.0a0'
+__version__ = '1.0'
 
 
 _warnings.warn(
