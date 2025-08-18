@@ -45,7 +45,21 @@
    :target: https://pypi.org/project/libravore/
 
 
-.. todo:: Provide project description and key features.
+🚩 **Misspelling Redirect Package**
+
+This package exists because "libravore" is a common misspelling of 
+`librovore <https://pypi.org/project/librovore/>`_ (note the "o"). While this 
+package name is reserved for a future "devourer of [model] weights", it is not 
+the "devourer of documentation" that you are looking for!
+
+**You probably want** `librovore <https://pypi.org/project/librovore/>`_ **instead.**
+
+What This Package Does ⭐
+===============================================================================
+
+* Issues a warning when imported to alert about the misspelling
+* Automatically redirects all imports to the correct ``librovore`` package
+* Prevents confusion from the common "library" → "libravore" misspelling
 
 
 Installation 📦
@@ -68,7 +82,21 @@ Or, install via ``pip``:
     pip install libravore
 
 
-.. todo:: Provide usage examples and additional content.
+Examples 💡
+===============================================================================
+
+**If you accidentally imported this package:**
+
+::
+
+    import libravore  # Shows warning, redirects to librovore
+
+**Better - use the correct package directly:**
+
+::
+
+    pip install librovore  # Note the "o"
+    import librovore       # The actual package you want
 
 
 Contribution 🤝

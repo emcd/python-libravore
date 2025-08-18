@@ -21,12 +21,25 @@
 ''' Misspelling of "librovore". See the Librovore package instead. '''
 
 
+import warnings as _warnings
+
+from librovore import *  # pyright: ignore
+
 from . import __
 # --- BEGIN: Injected by Copier ---
 # --- END: Injected by Copier ---
 
 
 __version__ = '1.0a0'
+
+
+_warnings.warn(
+    "You have imported 'libravore' which is a misspelling of "
+    "'librovore'. Consider updating your code to use 'librovore' (with an "
+    "'o') instead.",
+    UserWarning,
+    stacklevel=2
+)
 
 
 # TODO: Reclassify package modules as immutable and concealed.

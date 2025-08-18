@@ -15,13 +15,14 @@ license = 'Apache-2.0'
 readme = { 'file' = 'README.rst', 'content-type' = 'text/x-rst' }
 requires-python = '>= 3.10'
 dependencies = [
+  'librovore',
   'typing-extensions',
   # --- BEGIN: Injected by Copier ---
   # --- END: Injected by Copier ---
 ]
 classifiers = [ # https://pypi.org/classifiers
   'Development Status :: 4 - Beta',
-  #'Intended Audience :: Developers',
+  'Intended Audience :: Developers',
   'License :: OSI Approved :: Apache Software License',
   'Programming Language :: Python :: 3 :: Only',
   # --- BEGIN: Injected by Copier ---
@@ -32,10 +33,10 @@ classifiers = [ # https://pypi.org/classifiers
   'Programming Language :: Python :: Implementation :: CPython',
   'Programming Language :: Python :: Implementation :: PyPy',
   # --- END: Injected by Copier ---
-  #'Topic :: Software Development',
-  # TODO: Add classifiers as appropriate.
+  'Topic :: Software Development :: Libraries',
+  'Topic :: Utilities',
 ]
-keywords = [ ] # TODO: Add keywords.
+keywords = [ 'redirect', 'compatibility', 'librovore', 'misspelling' ]
 [[project.authors]]
 name = 'Eric McDonald'
 email = 'emcd@users.noreply.github.com'
