@@ -21,5 +21,12 @@
 Release Notes
 *******************************************************************************
 
-
 .. towncrier release notes start
+
+Libravore 1.0 (2025-08-18)
+==========================
+
+Enhancements
+------------
+
+- Implement automatic import redirection from the commonly misspelled "libravore" package to the correct "librovore" package, with user warning.
