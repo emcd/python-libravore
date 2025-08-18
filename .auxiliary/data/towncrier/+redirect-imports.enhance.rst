@@ -1,1 +1,0 @@
-Implement automatic import redirection from the commonly misspelled "libravore" package to the correct "librovore" package, with user warning.
