@@ -94,12 +94,12 @@ strict-naming = false
 python = '3.10'
 [tool.hatch.envs.develop]
 description = ''' Development environment. '''
+builder = true
 dependencies = [
-  'Jinja2',
   'coverage[toml]',
   'furo',
   'isort',
-  'packaging',
+  'myst-parser',
   'pre-commit',
   'pyright',
   'pytest',
@@ -129,10 +129,10 @@ docsgen = [
 ]
 linters = [
   """ruff check --quiet sources documentation tests""",
+  """vibelinter check""",
   # --- BEGIN: Injected by Copier ---
   # --- END: Injected by Copier ---
   """isort --check-only --diff sources tests""",
-  """vulture sources""",
   """pyright sources""",
 ]
 packagers = [
@@ -256,6 +256,7 @@ markers = [
 [tool.ruff]
 #builtins = [ 'ic' ]
 cache-dir = '.auxiliary/caches/ruff'
+extend-exclude = [ 'vulturefood.py' ]
 indent-width = 4
 line-length = 79
 [tool.ruff.lint]
@@ -346,11 +347,15 @@ directory = 'repair'
 name = 'Repairs'
 showcontent = true
 
+[tool.vibelinter]
+context = 3
+exclude_paths = [ '.auxiliary/**', '.venv/**', 'tests/**',  ]
+
 [tool.vulture]
-paths = [ 'sources' ]
-min_confidence = 80
+paths = [ '.auxiliary/configuration/vulturefood.py', 'sources' ]
+min_confidence = 60
 exclude = [
   '*/imports.py',
 ]
-ignore_decorators = [ '@__.cabc.abstractmethod', '@__.typx.overload' ]
-ignore_names = [ ]
+ignore_decorators = [ '@__.abc.abstractmethod', '@__.typx.overload' ]
+ignore_names = [ 'main' ]

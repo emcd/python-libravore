@@ -1,12 +1,11 @@
 # Changes here will be overwritten by Copier
-_commit: v1.43
+_commit: v1.57.1
 _src_path: gh:emcd/python-project-common
 author_email: emcd@users.noreply.github.com
 author_name: Eric McDonald
 description: Misspelling of "librovore". See the Librovore package instead.
 development_status: 4 - Beta
 distribution_name: libravore
-enable_cli: false
 enable_property_tests: false
 enable_publication: true
 enable_rust_extension: false
