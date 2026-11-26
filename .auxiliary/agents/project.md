@@ -18,7 +18,7 @@ PyPI misspelling-redirect and name-reservation package for
 
 ## Tech Stack
 
-- **Language & runtime**: Python `>= 3.10` (CPython 3.10–3.13, PyPy 3.10);
+- **Language & runtime**: Python `>= 3.12` (CPython 3.12–3.15);
   runtime dependencies `librovore` and `typing-extensions`.
 - **Build & environments**: Hatch / Hatchling (`pyproject.toml`, `hatch --env
   develop`).
@@ -34,7 +34,7 @@ PyPI misspelling-redirect and name-reservation package for
   functionality belongs in `emcd/python-librovore`.
 - Durable links:
   - Package overview: `README.rst`
-  - Product requirements & architecture: `documentation/prd.rst`,
-    `documentation/architecture/`
+  - Contribution & Sphinx docs: `documentation/contribution.rst`,
+    `documentation/index.rst`
   - Target package: https://github.com/emcd/python-librovore
     (PyPI: https://pypi.org/project/librovore/)
