@@ -104,7 +104,7 @@ Contribution 🤝
 
 Contribution to this project is welcome! However, it must follow the `code of
 conduct
-<https://emcd.github.io/python-project-common/stable/sphinx-html/common/conduct.html>`_
+<https://emcd.github.io/documentation-common/v1/sphinx-html/common/conduct.html>`_
 for the project.
 
 Please file bug reports and feature requests in the `issue tracker
@@ -116,7 +116,7 @@ For development guidance and standards, please see the `development guide
 <https://emcd.github.io/python-libravore/stable/sphinx-html/contribution.html#development>`_.
 
 
-`More Flair <https://www.imdb.com/title/tt0151804/characters/nm0431918>`_
+Additional Indicia
 ===============================================================================
 
 .. image:: https://img.shields.io/github/last-commit/emcd/python-libravore
@@ -156,15 +156,24 @@ Other Projects by This Author 🌟
 ===============================================================================
 
 
-* `python-absence <https://github.com/emcd/python-absence>`_ (`absence <https://pypi.org/project/absence/>`_ on PyPI) 
+* `agentmux <https://github.com/emcd/agentmux>`_  (`agentmux <https://crates.io/crates/agentmux/>`_ on Crates.io)
 
-  🕳️ A Python library package which provides a **sentinel for absent values** - a falsey, immutable singleton that represents the absence of a value in contexts where ``None`` or ``False`` may be valid values.
+  📡 Provides **relays for inter-agent communication** and a single pane of glass for managing multiple agent harness sessions.
+* `cistella <https://github.com/emcd/cistella>`_  (`cistella <https://crates.io/crates/cistella/>`_ on Crates.io)
+
+  🧱 A **sandboxing application** which **isolates agent sessions** via various technologies.
+* `nb-mcp-server <https://github.com/emcd/nb-mcp-server>`_  (`nb-mcp-server <https://crates.io/crates/nb-mcp-server/>`_ on Crates.io)
+
+  🗒️ An MCP server wrapping the ``nb`` CLI for **LLM-friendly note-taking**.
 * `python-accretive <https://github.com/emcd/python-accretive>`_ (`accretive <https://pypi.org/project/accretive/>`_ on PyPI) 
 
   🌌 A Python library package which provides **accretive data structures** - collections which can grow but never shrink.
 * `python-classcore <https://github.com/emcd/python-classcore>`_ (`classcore <https://pypi.org/project/classcore/>`_ on PyPI) 
 
   🏭 A Python library package which provides **foundational class factories and decorators** for providing classes with attributes immutability and concealment and other custom behaviors.
+* `python-detextive <https://github.com/emcd/python-detextive>`_ (`detextive <https://pypi.org/project/detextive/>`_ on PyPI) 
+
+  🕵️ A Python library which provides consolidated text detection capabilities for reliable content analysis. Offers MIME type detection, character set detection, and line separator processing.
 * `python-dynadoc <https://github.com/emcd/python-dynadoc>`_ (`dynadoc <https://pypi.org/project/dynadoc/>`_ on PyPI) 
 
   📝 A Python library package which bridges the gap between **rich annotations** and **automatic documentation generation** with configurable renderers and support for reusable fragments.
@@ -174,9 +183,6 @@ Other Projects by This Author 🌟
 * `python-frigid <https://github.com/emcd/python-frigid>`_ (`frigid <https://pypi.org/project/frigid/>`_ on PyPI) 
 
   🔒 A Python library package which provides **immutable data structures** - collections which cannot be modified after creation.
-* `python-icecream-truck <https://github.com/emcd/python-icecream-truck>`_ (`icecream-truck <https://pypi.org/project/icecream-truck/>`_ on PyPI) 
+* `python-ictr <https://github.com/emcd/python-ictr>`_ (`ictr <https://pypi.org/project/ictr/>`_ on PyPI) 
 
-  🍦 **Flavorful Debugging** - A Python library which enhances the powerful and well-known ``icecream`` package with flavored traces, configuration hierarchies, customized outputs, ready-made recipes, and more.
-* `python-mimeogram <https://github.com/emcd/python-mimeogram>`_ (`mimeogram <https://pypi.org/project/mimeogram/>`_ on PyPI) 
-
-  📨 A command-line tool for **exchanging collections of files with Large Language Models** - bundle multiple files into a single clipboard-ready document while preserving directory structure and metadata... good for code reviews, project sharing, and LLM interactions.
+  🍦 **Non-Intrusive Debugging** - A Python library which provides flavored traces, configuration hierarchies, customized outputs, and ready-made recipes for logging and debug printing.

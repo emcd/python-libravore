@@ -23,6 +23,22 @@ Release Notes
 
 .. towncrier release notes start
 
+libravore 1.1 (2026-11-25)
+==========================
+
+Enhancements
+------------
+
+- Support for Python 3.14 and 3.15.
+
+
+Removals
+--------
+
+- Drop support for PyPy and Python 3.10 and 3.11. Minimum supported Python
+  version is now 3.12.
+
+
 Libravore 1.0 (2025-08-18)
 ==========================
 

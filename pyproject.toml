@@ -13,9 +13,9 @@ description = 'Misspelling of "librovore". See the Librovore package instead.'
 dynamic = [ 'version' ]
 license = 'Apache-2.0'
 readme = { 'file' = 'README.rst', 'content-type' = 'text/x-rst' }
-requires-python = '>= 3.10'
+requires-python = '>= 3.12'
 dependencies = [
-  'librovore',
+  'librovore~=1.0a8',
   'typing-extensions',
   # --- BEGIN: Injected by Copier ---
   # --- END: Injected by Copier ---
@@ -26,12 +26,11 @@ classifiers = [ # https://pypi.org/classifiers
   'License :: OSI Approved :: Apache Software License',
   'Programming Language :: Python :: 3 :: Only',
   # --- BEGIN: Injected by Copier ---
-  'Programming Language :: Python :: 3.10',
-  'Programming Language :: Python :: 3.11',
   'Programming Language :: Python :: 3.12',
   'Programming Language :: Python :: 3.13',
+  'Programming Language :: Python :: 3.14',
+  'Programming Language :: Python :: 3.15',
   'Programming Language :: Python :: Implementation :: CPython',
-  'Programming Language :: Python :: Implementation :: PyPy',
   # --- END: Injected by Copier ---
   'Topic :: Software Development :: Libraries',
   'Topic :: Utilities',
@@ -91,16 +90,15 @@ strict-naming = false
 # --- BEGIN: Injected by Copier ---
 # --- END: Injected by Copier --- 
 [tool.hatch.envs.default]
-python = '3.10'
+python = '3.12'
 [tool.hatch.envs.develop]
 description = ''' Development environment. '''
+builder = true
 dependencies = [
-  'Jinja2',
   'coverage[toml]',
   'furo',
   'isort',
-  'packaging',
-  'pre-commit',
+  'myst-parser',
   'pyright',
   'pytest',
   'ruff',
@@ -127,13 +125,23 @@ docsgen = [
   """sphinx-build -a -d .auxiliary/caches/sphinx --quiet \
       documentation .auxiliary/artifacts/sphinx-html""",
 ]
+fragments = [
+  """python .auxiliary/scripts/validate-fragments.py""",
+]
+module-sizes = [
+  """python .auxiliary/scripts/validate-module-sizes.py""",
+]
 linters = [
   """ruff check --quiet sources documentation tests""",
+  # External install only (e.g. uv tool install): a develop dependency
+  # cycles for packages below emcd-vibe-linter in the stack.
+  #"""vibelinter check""",
   # --- BEGIN: Injected by Copier ---
   # --- END: Injected by Copier ---
   """isort --check-only --diff sources tests""",
-  """vulture sources""",
   """pyright sources""",
+  'fragments',
+  'module-sizes',
 ]
 packagers = [
   """hatch build""",
@@ -170,11 +178,10 @@ description = ''' Quality assurance environment. '''
 template = 'develop'
 [[tool.hatch.envs.qa.matrix]]
 python = [
-    '3.10',
-    '3.11',
     '3.12',
     '3.13',
-    'pypy3.10',
+    '3.14',
+    '3.15',
 ]
 [tool.hatch.version]
 path = 'sources/libravore/__init__.py'
@@ -256,6 +263,7 @@ markers = [
 [tool.ruff]
 #builtins = [ 'ic' ]
 cache-dir = '.auxiliary/caches/ruff'
+extend-exclude = [ 'vulturefood.py' ]
 indent-width = 4
 line-length = 79
 [tool.ruff.lint]
@@ -346,11 +354,15 @@ directory = 'repair'
 name = 'Repairs'
 showcontent = true
 
+[tool.vibelinter]
+context = 3
+exclude_paths = [ '.auxiliary/**', '.venv/**', 'tests/**',  ]
+
 [tool.vulture]
-paths = [ 'sources' ]
-min_confidence = 80
+paths = [ '.auxiliary/configuration/vulturefood.py', 'sources' ]
+min_confidence = 60
 exclude = [
   '*/imports.py',
 ]
-ignore_decorators = [ '@__.cabc.abstractmethod', '@__.typx.overload' ]
-ignore_names = [ ]
+ignore_decorators = [ '@__.abc.abstractmethod', '@__.typx.overload' ]
+ignore_names = [ 'main' ]

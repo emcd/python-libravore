@@ -1,30 +1,26 @@
 {
   "mcpServers": {
-    "librovore": {
-      "command": "uvx",
-      "args": [ "librovore", "serve" ]
-    },
-    "pyright": {
-      "command": "mcp-language-server",
+    "agentmux": {
+      "command": "agentmux",
       "args": [
-        "--lsp",
-        "pyright-langserver",
-        "--workspace",
-        ".",
-        "--",
-        "--stdio"
-      ]
+        "host", "mcp"
+      ],
+      "env": {
+        "AGENTMUX_BUNDLE": "${AGENTMUX_BUNDLE:-}",
+        "AGENTMUX_SESSION": "${AGENTMUX_SESSION:-}",
+        "AGENTMUX_CONFIGURATION_DIRECTORY": "${AGENTMUX_CONFIGURATION_DIRECTORY:-}",
+        "AGENTMUX_STATE_DIRECTORY": "${AGENTMUX_STATE_DIRECTORY:-}"
+      }
     },
-    "ruff": {
-       "command": "mcp-language-server",
-       "args": [
-         "--lsp",
-         "ruff",
-         "--workspace",
-         ".",
-         "--",
-         "server",
-         "--preview"
+    "context7": {
+      "command": "npx",
+      "args": [ "-y", "@upstash/context7-mcp" ]
+    },
+    "nb": {
+      "command": "nb-mcp",
+      "args": [
+        "--notebook", "python-libravore",
+        "--no-commit-signing"
       ]
     }
   }
