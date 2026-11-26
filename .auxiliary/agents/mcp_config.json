@@ -3,7 +3,7 @@
     "agentmux": {
       "command": "python3",
       "args": [
-        ".auxiliary/configuration/coders/antigravity/scripts/mcp-discover-shim.py",
+        ".auxiliary/agents/scripts/mcp-discover-shim.py",
         "agentmux",
         "host",
         "mcp"
@@ -12,16 +12,12 @@
     },
     "context7": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@upstash/context7-mcp"
-      ]
+      "args": [ "-y", "@upstash/context7-mcp" ]
     },
     "nb": {
       "command": "nb-mcp",
       "args": [
-        "--notebook",
-        "python-libravore",
+        "--notebook", "python-libravore",
         "--no-commit-signing"
       ]
     }
